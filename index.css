@@ -1,0 +1,459 @@
+html {
+  font-size: 62.5%;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar .checkbox {
+  display: none;
+}
+
+.navbar .checkbox:checked ~ .navigation {
+  left: 8rem;
+}
+
+.navbar .checkbox:checked ~ .sidebar .line-1 {
+  -webkit-transform: rotate(-405deg) translate(-5px, 6px);
+          transform: rotate(-405deg) translate(-5px, 6px);
+}
+
+.navbar .checkbox:checked ~ .sidebar .line-2 {
+  opacity: 0;
+}
+
+.navbar .checkbox:checked ~ .sidebar .line-3 {
+  -webkit-transform: rotate(405deg) translate(-5px, -6px);
+          transform: rotate(405deg) translate(-5px, -6px);
+}
+
+.navbar .checkbox:checked ~ .sidebar .line-1,
+.navbar .checkbox:checked ~ .sidebar .line-3 {
+  width: 2.5rem;
+}
+
+.navbar .sidebar {
+  width: 8rem;
+  height: 100%;
+  background-color: #eee;
+  position: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 10;
+}
+
+.navbar .sidebar .menu-icon {
+  margin-top: 3rem;
+  cursor: pointer;
+}
+
+.navbar .sidebar .menu-icon:hover .line {
+  width: 2.5rem;
+}
+
+.navbar .sidebar .menu-icon .line {
+  height: 0.2rem;
+  width: 2.5rem;
+  background-color: #222;
+  margin-bottom: 0.6rem;
+}
+
+.navbar .sidebar .menu-icon .line-1,
+.navbar .sidebar .menu-icon .line-3 {
+  width: 1.8rem;
+  -webkit-transition: all 0.4s;
+  transition: all 0.4s;
+}
+
+.navbar .sidebar .social-icons-list {
+  list-style: none;
+  padding: 0;
+  height: 25rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: space-evenly;
+      -ms-flex-pack: space-evenly;
+          justify-content: space-evenly;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .sidebar .social-icons-list .social-link {
+  font-size: 2rem;
+  color: #777;
+  -webkit-transition: color 0.3s;
+  transition: color 0.3s;
+}
+
+.navbar .sidebar .social-icons-list .social-link:hover {
+  color: #deaa86;
+}
+
+.navbar .sidebar .year {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #555;
+}
+
+.navbar .navigation {
+  position: fixed;
+  left: -32rem;
+  width: 40rem;
+  height: 100%;
+  background: -webkit-gradient(linear, left bottom, left top, from(#222029), to(rgba(34, 32, 41, 0.8))), url(./img/nav-bg.jpeg) center no-repeat;
+  background: linear-gradient(to top, #222029, rgba(34, 32, 41, 0.8)), url(./img/nav-bg.jpeg) center no-repeat;
+  background-size: cover;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+  transition: left 0.8s cubic-bezier(1, 0, 0, 1);
+}
+
+.navbar .navigation .navigation-header .navigation-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: #deaa86;
+  text-align: center;
+}
+
+.navbar .navigation .navigation-header form.navigation-search {
+  position: relative;
+}
+
+.navbar .navigation .navigation-header form.navigation-search .navigation-search-input {
+  width: 30rem;
+  padding: 1rem 2rem;
+  background-color: rgba(0, 0, 0, 0.3);
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 1.6rem;
+  color: #deaa86;
+  letter-spacing: 0.1rem;
+  outline: none;
+  border: 0.1rem solid #555;
+  border-radius: 10rem;
+  -webkit-transition: background-color 0.3s;
+  transition: background-color 0.3s;
+}
+
+.navbar .navigation .navigation-header form.navigation-search .navigation-search-input:focus {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+
+.navbar .navigation .navigation-header form.navigation-search .navigation-search-btn {
+  border: none;
+  background-color: transparent;
+  color: #deaa86;
+  font-size: 1.7rem;
+  position: absolute;
+  top: 1rem;
+  right: 1rem;
+  cursor: pointer;
+}
+
+.navbar .navigation .navigation-header form.navigation-search .navigation-search-btn:focus {
+  outline: none;
+}
+
+.navbar .navigation .navigation-list {
+  list-style: none;
+  padding: 0;
+  height: 28rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.navbar .navigation .navigation-list .navigation-item {
+  position: relative;
+}
+
+.navbar .navigation .navigation-list .navigation-item .navigation-link {
+  color: #fff;
+  font-size: 1.6rem;
+  font-weight: 400;
+  letter-spacing: 0.1rem;
+  text-transform: uppercase;
+  text-decoration: none;
+  -webkit-transition: color 0.5s;
+  transition: color 0.5s;
+}
+
+.navbar .navigation .navigation-list .navigation-item .navigation-link:hover {
+  color: #deaa86;
+}
+
+.navbar .navigation .navigation-list .navigation-item .navigation-link:hover::before, .navbar .navigation .navigation-list .navigation-item .navigation-link:hover::after {
+  width: 3rem;
+}
+
+.navbar .navigation .navigation-list .navigation-item .navigation-link::before {
+  content: "";
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  left: -4rem;
+  -webkit-transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navbar .navigation .navigation-list .navigation-item .navigation-link::after {
+  content: "";
+  width: 0rem;
+  height: 0.1rem;
+  background-color: #deaa86;
+  position: absolute;
+  top: 1rem;
+  right: -4rem;
+  -webkit-transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+  transition: width 0.5s cubic-bezier(1, 0, 0, 1);
+}
+
+.navbar .navigation .copyright {
+  color: #ffffff;
+  font-size: 1.2rem;
+  margin-bottom: 1.5rem;
+}
+
+.header {
+  margin-left: 8rem;
+  height: 100vh;
+  background: -webkit-gradient(linear, left bottom, left top, from(black), to(rgba(0, 0, 0, 0.5))), url(img/header-1.jpeg) center no-repeat;
+  background: linear-gradient(to top, black, rgba(0, 0, 0, 0.5)), url(img/header-1.jpeg) center no-repeat;
+  background-size: cover;
+}
+
+.header .brand {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  cursor: pointer;
+}
+
+.header .brand .hotel-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 2.7rem;
+  font-weight: 400;
+  color: #deaa86;
+  letter-spacing: 0.2rem;
+}
+
+.header .banner {
+  color: #ddd;
+  height: 65rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.header .banner .banner-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 7rem;
+  font-weight: 400;
+  margin-bottom: 0;
+  -webkit-animation: anim 2s;
+          animation: anim 2s;
+}
+
+.header .banner .banner-paragraph {
+  font-size: 3.5rem;
+  font-weight: 300;
+  -webkit-animation: anim 1.5s 0.5s backwards;
+          animation: anim 1.5s 0.5s backwards;
+}
+
+.header .banner .banner-button {
+  width: 21rem;
+  padding: 1.2rem 2rem;
+  font-size: 2rem;
+  color: #333;
+  letter-spacing: 0.1rem;
+  border: none;
+  border-radius: 10rem;
+  outline: none;
+  background: -webkit-gradient(linear, left top, right top, from(gold), to(goldenrod));
+  background: linear-gradient(to right, gold, goldenrod);
+  cursor: pointer;
+  -webkit-animation: anim 1s 1s backwards;
+          animation: anim 1s 1s backwards;
+}
+
+.header .banner .banner-button:hover {
+  background: -webkit-gradient(linear, right top, left top, from(gold), to(goldenrod));
+  background: linear-gradient(to left, gold, goldenrod);
+}
+
+.header .banner .banner-button:active {
+  -webkit-transform: translateY(0.2rem);
+          transform: translateY(0.2rem);
+}
+
+.about-us {
+  margin-left: 8rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  background-color: #ddd;
+}
+
+.about-us .about-us-content {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 50%;
+          flex: 0 1 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 10rem;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+.about-us .about-us-content .about-us-heading {
+  font-family: "Josefin Sans", sans-serif;
+  font-size: 4rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  color: #555;
+}
+
+.about-us .about-us-content .underline .small-underline {
+  width: 9rem;
+  height: 0.1rem;
+  margin: 0 auto 1rem auto;
+  background-color: #b85d1c;
+}
+
+.about-us .about-us-content .underline .big-underline {
+  width: 20rem;
+  height: 0.1rem;
+  background-color: #b85d1c;
+}
+
+.about-us .about-us-content .sub-heading {
+  font-size: 3.5rem;
+  font-weight: 300;
+  letter-spacing: 0.2rem;
+  color: #b85d1c;
+}
+
+.about-us .about-us-content .about-us-paragraph {
+  font-size: 1.6rem;
+  font-style: italic;
+  font-weight: 300;
+  text-align: center;
+  margin-bottom: 5rem;
+}
+
+.about-us .about-us-content .about-us-btn {
+  width: 15rem;
+  padding: 0.7rem 0.5rem;
+  font-family: "Montserrat", sans-serif;
+  -webkit-transform: uppercase;
+          transform: uppercase;
+  color: #b85d1c;
+  background-color: transparent;
+  border: 0.1rem solid #b85d1c;
+  outline: none;
+  cursor: pointer;
+}
+
+.about-us .about-us-content .about-us-btn:hover .btn-arrow {
+  margin-left: 1.5rem;
+}
+
+.about-us .about-us-content .about-us-btn .btn-arrow {
+  margin-left: 0.5rem;
+  -webkit-transition: margin-left 0.4s;
+  transition: margin-left 0.4s;
+}
+
+.about-us .about-us-images {
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1;
+          flex: 1 1;
+}
+
+@-webkit-keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+@keyframes anim {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+/*# sourceMappingURL=index.css.map */
